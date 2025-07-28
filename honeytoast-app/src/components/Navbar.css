@@ -12,7 +12,7 @@
 }
 
 .navbar {
-  background-color: #E1AD01;
+  background-color: orange;
   height: 80px;
   display: flex;
   justify-content: start;
@@ -36,11 +36,13 @@
   top: 0;
   left: -100%;
   transition: 850ms;
+  z-index: 1000;
 }
 
 .nav-menu.active {
   left: 0;
   transition: 350ms;
+  z-index: 1000;
 }
 
 .nav-text {
