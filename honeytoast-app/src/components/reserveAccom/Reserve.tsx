@@ -87,12 +87,12 @@ const Reserve = ({ hotelId, setOpen, user }: { hotelId: number; setOpen: (value:
 
         setIsBooking(true);
         try {
-            await axios.put(`http://localhost:8800/api/rooms/availability/${selectedRooms.join(',')}`, {
+            await axios.put(`https://honeytoastaccomapi-jqbl7ri2.b4a.run/api/rooms/availability/${selectedRooms.join(',')}`, {
                 datesToAdd: dateRange
             });
 
             // Create booking record
-            await axios.post('http://localhost:8800/api/bookings', {
+            await axios.post('https://honeytoastaccomapi-jqbl7ri2.b4a.run/api/bookings', {
                 user: user.id,
                 hotel: hotelId,
                 rooms: selectedRooms,
