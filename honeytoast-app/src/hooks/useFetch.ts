@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios, { AxiosError } from "axios";
 
 // Set base URL for all Axios requests
-const API_BASE_URL = "http://localhost:8800/api"; // Change to your backend URL
+const API_BASE_URL = "https://honeytoastaccomapi-jqbl7ri2.b4a.run/api"; // Change to your backend URL
 
 axios.defaults.baseURL = API_BASE_URL;
 axios.defaults.withCredentials = true; // For cookies

@@ -12,7 +12,9 @@ import bookingsRoute from "./routes/bookings.js";
 const app = express();
 // Enable CORS with specific frontend origin
 app.use(cors({
-  origin: 'http://localhost:3000', // Your React app
+  origin: ['http://localhost:3000',
+    'https://orbital-25-five.vercel.app'],
+   // Your React app
   credentials: true, // If using cookies
   methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
@@ -31,6 +33,10 @@ app.use((req, res, next) => {
   console.log('Headers:', req.headers);
   console.log('Query:', req.query);
   next();
+});
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the Hotel Booking API! 🏨");
 });
 
 app.use("/api/auth", authRoute);
