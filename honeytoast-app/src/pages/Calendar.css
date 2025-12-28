@@ -1,21 +1,21 @@
 .fc-event-title {
     color: white;
-    font-weight: 400;
+    font-weight: 400 !important;
     border-radius: 6px;
     white-space: normal !important; 
     overflow: visible !important;    
     text-overflow: unset !important; 
     word-break: break-word;  
+    background-color: #3788d8;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .fc-event-time {
     display: none !important
-    /* white-space: nowrap !important; /* time displayed without wrapping, but title wraps*/
-    /* overflow: visible !important;
-    text-overflow: ellipsis;
-    margin-right: 5px; 
-    display: inline-block; 
-    vertical-align: middle; */
+}
+
+.fc-daygrid-event-dot {
+    display: none !important
 }
 
 .calendar-layout {
